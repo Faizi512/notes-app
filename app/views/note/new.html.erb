@@ -1,0 +1,13 @@
+<%= form_with(url: new_note_path) do |form| %>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title, class: 'form-control' %>
+    </div>
+
+    <div>
+        <%= form.label :message %>
+        <%= form.text_field :message, class: 'form-control' %>
+    </div>
+
+    <%= form.submit 'Create Note' %>
+<%end%>

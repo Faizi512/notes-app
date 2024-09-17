@@ -7,7 +7,12 @@ class NoteController < ApplicationController
     end
 
     def new
-        @note = current_user.note.build
+        @note = current_user.notes.build
+        if @note.save
+            redirect_to @note, notice: 'New note created!'
+        else
+            render :new
+        end
     end
 
     def create

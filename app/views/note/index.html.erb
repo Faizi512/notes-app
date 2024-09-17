@@ -1,0 +1,11 @@
+<h1> All notes </h1>
+
+<%=  link_to 'New Note', new_note_path  %>
+
+<ui>
+    <% @notes.each_with_index do |note, index| %>
+        <li>
+            <%= link_to note.title, note_path(note) %>
+        </li>
+    <%end%>
+</ui>
