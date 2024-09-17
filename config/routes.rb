@@ -15,6 +15,8 @@ Rails.application.routes.draw do
     confirmations: 'users/confirmations',
     unlocks: 'users/unlocks'
   }
+
+  resources :note
   # Defines the root path route ("/")
   # root "posts#index"
 end

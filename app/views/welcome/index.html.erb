@@ -2,6 +2,9 @@
 <p>Find me in app/views/welcome/index.html.erb</p>
 
 
+<%= link_to 'Notes', note_index_path, method: :get %>
+
+
 <%= form_with(url: destroy_user_session_path, method: :delete, local: true) do %>
     <%= submit_tag 'Sign Out' %>
 <%end%>
